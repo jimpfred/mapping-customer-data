@@ -34,7 +34,8 @@ export default function App() {
     longitude: -117.93113,
     width: '100vw',
     height: '100vh',
-    zoom: 14
+    zoom: 14,
+    pitch:30
   });
 
   
@@ -62,12 +63,13 @@ export default function App() {
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken='pk.eyJ1IjoiamltcGZyZWQiLCJhIjoiY2twNHU2bzJyMjNzZzJ1cXcweTN6azMyZSJ9.EL6OH1RDBnamvnIFj9tmXw'
+        mapStyle='mapbox://styles/jimpfred/ckpyoslp90u5k17s23zytp443'
         onViewportChange= {viewport => {
           setViewport(viewport)
         }}
       >
           <Marker latitude={latitude1} longitude={longitude1}>
-            <div>*</div>
+            <img src='/public/clipart696141' alt='*'/>
           </Marker>
           <Marker latitude={latitude2} longitude={longitude2}>
             <div>*</div>
