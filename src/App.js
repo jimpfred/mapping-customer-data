@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL, { Marker } from "!react-map-gl";
 import "./App.css";
 
 const longitude1 = -117.93113
@@ -28,7 +28,7 @@ export default function App() {
       longitude: "",
       latitude: ""
     },
-  });
+    });  
   const [viewport, setViewport] = useState({
     latitude: 33.7032626,
     longitude: -117.93113,
@@ -42,7 +42,8 @@ export default function App() {
   useEffect(function() {
     async function getAppData() {
 
-      const skills = await fetch('https://pammys-backend-final.herokuapp.com/api/skills')
+    const skills = await fetch('https://pammys-backend-final.herokuapp.com/api/skills')
+  //const skills = await fetch('http://localhost:3001/api/skills')
       .then(res => res.json());
       
       setState(prevState => ({
