@@ -42,7 +42,7 @@ export default function App() {
   useEffect(function() {
     async function getAppData() {
 
-      const skills = await fetch('https://pammys-backend-final.herokuapp.com//api/skills')
+      const skills = await fetch('https://pammys-backend-final.herokuapp.com/api/skills')
       .then(res => res.json());
       
       setState(prevState => ({
