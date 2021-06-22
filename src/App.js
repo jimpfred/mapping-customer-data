@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ReactMapGL, { Marker } from "!react-map-gl";
+import ReactMapGL, { Marker } from "react-map-gl";
 import "./App.css";
 
 const longitude1 = -117.93113
